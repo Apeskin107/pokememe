@@ -1,0 +1,9 @@
+{
+  "name": "pokememe",
+  "version": "0.0.1",
+  "description": "an online multiplayer card game",
+  "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  }
+}

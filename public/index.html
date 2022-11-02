@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pokememe</title>
+    <style>
+      .chat {
+        margin:4px, 4px;
+        padding:4px;
+        height: 442px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align:justify;
+        grid-column: 2/4;
+        grid-row: 1;
+      }
+
+      .newMessage {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .submitIt {
+        grid-column: 3;
+        grid-row: 2;
+        font-family: "Comic Sans MS", "Comic Sans", bold;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+      }
+
+      .game {
+        grid-column: 1;
+        grid-row: 1/2;
+      }
+
+      .msg {
+        font-family: "Comic Sans MS", "Comic Sans", bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+    <script src="client.js"></script>
+    <div class="grid-container">
+      <div id="game" class="game"></div>
+      <div id="chat" class="chat"></div>
+      <div class="newMessage"><input type="text" id="message" size="30" class="msg"></div>
+      <button class="submitIt" onclick="submit()">submit</button>
+    </div>
+  </body>
+</html>
